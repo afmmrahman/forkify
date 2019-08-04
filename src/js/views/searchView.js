@@ -59,7 +59,7 @@ const createButton = (page, type) => `
         <svg class="search__icon">
             <use href="img/icons.svg#icon-triangle-${type === 'prev' ? 'left' : 'right'}"></use>
         </svg>
-     </button>
+    </button>
 `;
 
 const renderButtons = (page, numResults, resPerPage) => {

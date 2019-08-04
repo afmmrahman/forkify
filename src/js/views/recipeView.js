@@ -31,7 +31,7 @@ const createIngredient = ingredient => `
         <div class="recipe__ingredient">
             <span class="recipe__unit">${ingredient.unit}</span>
             ${ingredient.ingredient}
-         </div>
+        </div>
     </li>
 `;
 export const renderRecipe = (recipe, isLiked) => {
@@ -106,10 +106,10 @@ export const renderRecipe = (recipe, isLiked) => {
 
             </a>
         </div>
-     `;
-     elements.recipe.insertAdjacentHTML('afterbegin', markup);
+    `;
+    elements.recipe.insertAdjacentHTML('afterbegin', markup);
 };
- 
+
 export const updateServingsIngredients = recipe => {
     // Update servings
     document.querySelector('.recipe__info-data--people').textContent = recipe.servings;
