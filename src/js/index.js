@@ -15,12 +15,10 @@ import { elements, renderLoader, clearLoader } from './views/base';
     * - Liked recipes 
 */
 const state = {};
-window.state = state;
 
 /** 
  * SEARCH CONTROLLER 
  */
-
 const controlSearch = async () => {
     // 1. Get query from the view
     const query = searchView.getInput();
@@ -67,11 +65,9 @@ elements.searchResPages.addEventListener('click', e => {
 /** 
  * RECIPE CONTROLLER 
  */
-
 const controlRecipe = async () => {
     // Get id from url
     const id = window.location.hash.replace('#', '');
-    console.log(id);
 
     if (id){
         // Prepare UI for changes
@@ -112,10 +108,10 @@ const controlRecipe = async () => {
 
  ['hashchange', 'load'].forEach(event => window.addEventListener(event, controlRecipe));
 
+ 
  /** 
  * LIST CONTROLLER 
  */
-
 const controlList = () => {
     // Create a new list if there is none yet 
     if (!state.list) state.list = new List();
@@ -150,8 +146,6 @@ elements.shopping.addEventListener('click', e => {
 /** 
  * LIKE CONTROLLER 
  */
- 
-
 const controlLike = () => {
     if (!state.likes) state.likes = new Likes();
     const currentID = state.recipe.id;
@@ -226,6 +220,4 @@ window.addEventListener('load', () => {
         controlLike();
     }
  });
-
-
- window.l = new List(); 
+ 
